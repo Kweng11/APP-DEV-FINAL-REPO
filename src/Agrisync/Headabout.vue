@@ -1,12 +1,18 @@
 <template>
     <div class="hero_area">
-        <div class="hero_bg_box">
+      <div class="hero_bg_box">
              <img src="@/assets/agrisync/images/BG.png" alt="">
-            
-              
+                         
         </div>
         <!-- header section strats -->
         <header class="header_section" style="position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 100px; background-color: #00a087;">
+          <div class="logo" style="position: fixed; top: 0; left: 0;height: 0; width: 10;">
+               <img src="@/assets/agrisync/images/B.png" height="100" width="100">
+                <a href="/Login"> <img src="@/assets/agrisync/images/L.png" height="100" width="100"></a>
+             
+            </div>
+
+
         <div class="container">
             <nav class="navbar navbar-expand-lg custom_nav-container ">
             <a class="navbar-brand" href="/">
@@ -48,84 +54,84 @@
             </nav>
         </div>
         </header>
-
-
-
-             <!-- slider section -->
-     <section class="slider_section ">
-           <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-             <div class="carousel-inner">
-               <div class="carousel-item active">
-                 <div class="container ">
-                   <div class="row">
-                     <div class="col-md-7  col-lg-6">
-                       <div class="detail-box">
-                         <h1>
-                        Onion Report MIMAROPA
-                         </h1>
-                         <p>
-                          Mandated to contribute for attainment of the food self sufficiency, economic growth and enhancement of consumers health and welfare. It also promotes the production, processing, marketing and distribution of high value crops.
-                         </p>
-                
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-               <div class="carousel-item ">
-                 <div class="container ">
-                   <div class="row">
-                     <div class="col-md-7">
-                       <div class="detail-box">
-                         <h1>
-                            Vision
-                         </h1>
-                         <p>
-                           A productive farming community
-                         </p>
-                         <br>
-                          <h1> 
-                            Mission
-                          </h1>
-                        <p>
-                           Empowers high value crops producers
-                           Helps attain food self sufficiency and economic growth
-
-                        </p>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-               <div class="carousel-item">
-                 <div class="container ">
-                   <div class="row">
-                     <div class="col-md-7 col-lg-6">
-                       <div class="detail-box">
-                         <h1>
-              
-                           High Value Crop Development Program
-                         </h1>
-                         <p>
-                            Mandated to contribute for attainment of the food self sufficiency, economic growth and enhancement of consumers health and welfare. It also promotes the production, processing, marketing and distribution of high value crops.
-                         </p>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                 </div>
-               <ol class="carousel-indicators">
-               <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-               <li data-target="#customCarousel1" data-slide-to="1"></li>
-               <li data-target="#customCarousel1" data-slide-to="2"></li>
-             </ol>
-           </div>
-        
-    </section>
-<!-- end slider section -->
+        <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="detail-box">
+                    <h1>
+                      Onion Report MIMAROPA
+                    </h1>
+                   <h1><p>
+                      Mandated to contribute for attainment of the food self sufficiency, 
+                      <br> 
+                      economic growth and enhancement of consumers health and welfare. 
+                      <br>
+                      It also promotes the production, processing, marketing and distribution
+                      <br>
+                       of high value crops.
+                    </p>  </h1> 
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="detail-box">
+                    <h1>
+                      Vision
+                    </h1>
+                    <p>
+                      A productive farming community
+                    </p>
+                    <br>
+                     <h1> 
+                      Mission
+                     </h1>
+                   <p>
+                     Empowers high value crops producers
+                     Helps attain food self sufficiency and economic growth
+    
+                   </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container ">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="detail-box">
+                      <h1>
+                      
+                        High Value Crop Development Program
+                      </h1>
+                      <p>
+                        Mandated to contribute for attainment of the food self sufficiency, economic growth and enhancement of consumers health and welfare. It also promotes the production, processing, marketing and distribution of high value crops.
+                      </p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              </div>
+              <ol class="carousel-indicators">
+              <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+              <li data-target="#customCarousel1" data-slide-to="1"></li>
+              <li data-target="#customCarousel1" data-slide-to="2"></li>
+            </ol>
+          </div>
+            </div>
+          </section>
+      
     </div>
-
 
 
     

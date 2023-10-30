@@ -9,7 +9,7 @@
                  <div class="col-sm-6 col-lg-4 mx-auto">
             <div class="box">
               <div class="img-box">
-                <img src="@/assets/agrisync/images/mar.png" alt="">
+                <img src="@/assets/agrisync/images/mar.png"  alt="">
               </div>
               <div class="detail-box">
                
@@ -36,7 +36,7 @@
         <div class="col-sm-6 col-lg-4 mx-auto">
             <div class="box">
               <div class="img-box">
-                <img src="@/assets/agrisync/images/oc.png" alt="">
+                <img src="@/assets/agrisync/images/oc.png" alt="" height="600" width="90">
               </div>
               <div class="detail-box">
                 <h5>
@@ -62,8 +62,7 @@
           <div class="col-sm-6 col-lg-4 mx-auto">
             <div class="box">
               <div class="img-box">
-                <img src="@/assets/agrisync/images/or.png" alt="" heigh= 50 width=70>
-              </div>
+                <img src="@/assets/agrisync/images/or.png" alt="" height="600" width="90">
               <div class="detail-box">
               
                 <h5>
@@ -73,6 +72,7 @@
             </div>
           </div>
           </div>      
+        </div>      
                 <div class="btn-box">
           <a href="/About">
             View All
