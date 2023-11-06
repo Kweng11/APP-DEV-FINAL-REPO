@@ -1,4 +1,8 @@
 <template>
+
+<div class="container-scroller">
+
+  <div class="container-fluid page-body-wrapper">
     <div class="theme-setting-wrapper">
         <div id="settings-trigger"><i class="ti-settings"></i></div>
         <div id="theme-settings" class="settings-panel">
@@ -167,4 +171,8 @@
           <!-- chat tab ends -->
         </div>
       </div>
+      </div>
+      <!-- page-body-wrapper ends -->
+</div>
+  <!-- container-scroller -->
 </template>

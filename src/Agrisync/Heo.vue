@@ -1,8 +1,10 @@
 <template>
     
       <div class="hero_area">
-       
-    
+        <div class="hero_bg_box">
+           <img src="@/assets/agrisync/images/H.png" alt="">
+           </div>
+                 
         <header class="header_section" style="position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 100px; background-color: #00a087;">
             
 
@@ -61,10 +63,6 @@
             </nav>
         </div>
         </header>
-
-
-
-
 
         </div>
 </template>

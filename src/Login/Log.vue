@@ -47,7 +47,10 @@
 </div>
 
 <!-- Submit button -->
-<button type="button"  href="/User" class="btn btn-primary btn-block mb-4">Sign in</button>
+<div class="text-center">
+<a type="button" href="/Dashboard"  class="btn btn-primary btn-block mb-4" >Sign in</a>
+</div>
+
 
 <!-- Register buttons -->
 <div class="text-center">

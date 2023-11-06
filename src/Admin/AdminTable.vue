@@ -1,4 +1,7 @@
 <template>
+     <div class="container-scroller">
+  <div class="container-fluid page-body-wrapper">
+    <div class="main-panel">
     <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
@@ -10,21 +13,22 @@
                     <table class="table table-bordered">
                       <thead>
                         <tr>
-                          <th>
-                            #
-                          </th>
-                          <th>
-                            First name
-                          </th>
-                          <th>
-                            Progress
-                          </th>
-                          <th>
-                            Amount
-                          </th>
-                          <th>
-                            Deadline
-                          </th>
+                          <th>#</th>
+                          <th> Name of Framer</th>
+                          <th>Farm Location</th>
+                          <th>No. of Cans</th>
+                          <th> Seedling Date</th>
+                          <th> Expected No. of Area</th>
+                          <th>Damagedd By Typhoon (ha)</th>
+                          <th>Damagedd By Typhoon (ha)</th>
+                          <th> Damaged By Heavy Rains(HA)</th>
+                          <th>Total Damaged(HA)</th>
+                          <th>No. of Cans Damaged</th>
+                          <th>Standing Crop</th>
+                          <th>Transplante Date</th>
+                          <th>Expected Date of Harvest</th>
+                          <th>Expected Area of Harvest(HA)</th>
+                          <th>Expected Volume of Harvest (MT)</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -73,98 +77,20 @@
                           <td>
                             John Richards
                           </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-warning" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $138.00
-                          </td>
-                          <td>
-                            Apr 12, 2015
-                          </td>
+                        
                         </tr>
-                        <tr>
-                          <td>
-                            4
-                          </td>
-                          <td>
-                            Peter Meggik
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-primary" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 77.99
-                          </td>
-                          <td>
-                            May 15, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            5
-                          </td>
-                          <td>
-                            Edward
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 160.25
-                          </td>
-                          <td>
-                            May 03, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            6
-                          </td>
-                          <td>
-                            John Doe
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-info" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 123.21
-                          </td>
-                          <td>
-                            April 05, 2015
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            7
-                          </td>
-                          <td>
-                            Henry Tom
-                          </td>
-                          <td>
-                            <div class="progress">
-                              <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                          </td>
-                          <td>
-                            $ 150.00
-                          </td>
-                          <td>
-                            June 16, 2015
-                          </td>
-                        </tr>
+                                        
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
 </template>

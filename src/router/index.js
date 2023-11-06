@@ -3,7 +3,10 @@ import Agrisync from '../views/Agrisync.vue'
 import about from '../views/About.vue'
 import Contact from '../views/Contact.vue'
 import Login from '../views/Login.vue'
-import User from '../views/User.vue'
+import Dashboard from '../views/Dashboard.vue'
+import Report from '../views/Report.vue'
+import Table from '../views/Table.vue'
+
 const routes = [
   {
     path: '/',
@@ -26,10 +29,22 @@ const routes = [
     component: Login
   },
   {
-    path: '/User',
-    name: 'User',
-    component: User
+    path: '/Dashboard',
+    name: 'Dahboard',
+    component: Dashboard
   },
+  {
+    path: '/Report',
+    name: 'Report',
+    component: Report
+  },
+  {
+    path: '/Table',
+    name: 'Table',
+    component: Table
+  },
+ 
+ 
 ]
   const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

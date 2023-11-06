@@ -1,4 +1,65 @@
 <template>
+       <div class="container-scroller">
+  <div class="container-fluid page-body-wrapper">
+    <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/Dashboard">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Report">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Report</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Table">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Table</span>
+            </a>
+          </li>
+             <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Charts</span>
+              <i class="menu-arrow"></i>
+            </a>
+             
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Bar Chart</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">LineChart</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">PieChart</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">User Pages</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+               <li class="nav-item"> <a class="nav-link" href="/LGU" >LGU</a></li>
+              </ul>
+            </div>
+          </li>
+  
+        </ul>
+      </nav>
+    <div class="main-panel">
     <div class="content-wrapper">
           <div class="row">
             <div class="col-12 grid-margin stretch-card">
@@ -10,42 +71,72 @@
                   </p>
                   <form class="forms-sample">
                     <div class="form-group">
-                      <label for="exampleInputName1">Name</label>
-                      <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                      <label for="NameofFramer">Name of Framer</label>
+                      <input type="text" class="form-control" id="NameofFarmer" placeholder="Name of Farmer">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail3">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                      <label for="FarmerLocation">Farmer Location</label>
+                      <input type="text" class="form-control" id="FarmerLocation" placeholder="Farmer Location">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputPassword4">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
+                      <label for="NoofCans">No. of Cans</label>
+                      <input type="number" class="form-control" id="NoofCans" placeholder="No. of Cans">
                     </div>
                     <div class="form-group">
-                      <label for="exampleSelectGender">Gender</label>
-                        <select class="form-control" id="exampleSelectGender">
-                          <option>Male</option>
-                          <option>Female</option>
-                        </select>
-                      </div>
+                      <label for="SeedlingDate">Seedling Date</label>
+                      <input type="Number" class="form-control" id="SeedlingDate"  placeholder="Seedling Date">
+                    </div>
+                                
                     <div class="form-group">
-                      <label>File upload</label>
-                      <input type="file" name="img[]" class="file-upload-default">
-                      <div class="input-group col-xs-12">
-                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                        <span class="input-group-append">
-                          <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                        </span>
-                      </div>
+                      <label for="NoofArea">Expected No. of Area</label>
+                      <input type="text" class="form-control" id="NoofArea" placeholder="Expected No of Area">
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputCity1">City</label>
-                      <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
+                      <label for="DamegeTyphoon">Damagedd By Typhoon (ha)</label>
+                      <input type="text" class="form-control" id="DamagedTyphoon" placeholder=" Damaged By Typhoon">
                     </div>
                     <div class="form-group">
-                      <label for="exampleTextarea1">Textarea</label>
-                      <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
+                      <label for="DamegeTyphoon"> Damaged By Typhoon (ha)</label>
+                      <input type="text" class="form-control" id="DamagedTyphoon" placeholder=" Damaged By Typhoon">
                     </div>
+                    <div class="form-group">
+                      <label for="Rain"> Damaged By Heavy Rains(HA)</label>
+                      <input type="text" class="form-control" id="Rain" placeholder=" Damaged By Heavy Rains">
+                    </div>
+        
+                      <div class="form-group">
+                      <label for="Toatal">Total Damaged(HA)</label>
+                      <input type="text" class="form-control" id="TotalDamagedd" placeholder=" TotalDamagedd">
+                    </div>
+                    <div class="form-group">
+                      <label for="NoofCansDamaged">No. of Cans Damaged</label>
+                      <input type="number" class="form-control" id="NoofCansDamaged" placeholder="No. of Cans Damaged">
+                    </div>
+                    <div class="form-group">
+                      <label for="StandingCrop">Standing Crop</label>
+                      <input type="text" class="form-control" id="StandingCrop" placeholder="StandingbCrop">
+                    </div>
+                    <div class="form-group">
+                      <label for="TransplateDate">Transplante Date</label>
+                      <input type="text" class="form-control" id="TransplateDate" placeholder="Transplate Date">
+                    </div>
+                    <h4 class="card-title">May Date Dapat Dine</h4>
+                  <p class="card-description">
+                    Basic form elements
+                  </p>
+                  <div class="form-group">
+                      <label for="ExpectedDate">Expected Date of Harvest</label>
+                      <input type="number" class="form-control" id="ExpectedDate" placeholder="Expected Date of Harvest">
+                    </div>
+                    <div class="form-group">
+                      <label for="ExpectedArea" >Expected Area of Harvest(HA)</label>
+                      <input type="text" class="form-control" id="ExpectedArea" placeholder="Expected Area of Harvest">
+                    </div>
+                    <div class="form-group">
+                      <label for="ExpectedVolume">Expected Volume of Harvest (MT)</label>
+                      <input type="number" class="form-control" id="ExpectedVolume" placeholder="Expected Volume of Harvest">
+                    </div>
+                                    
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
                   </form>
@@ -54,4 +145,12 @@
             </div>
           </div>
         </div>
+
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
 </template>
