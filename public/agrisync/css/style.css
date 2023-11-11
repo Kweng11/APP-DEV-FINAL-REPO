@@ -139,8 +139,7 @@ a:focus {
 }
 
 .header_section {
-  padding: 20px 0;
-  
+  padding: 15px 0;
 }
 
 .header_section .container-fluid {
@@ -154,10 +153,7 @@ a:focus {
   color: #ffffff;
   text-transform: uppercase;
 }
-.logo {
-  width: 50;
-  height: 10;
-}
+
 .custom_nav-container {
   padding: 0;
 }
@@ -845,6 +841,7 @@ a:focus {
   color: #ffffff;
 }
 
+
 .footer_section .footer_links a:hover {
   color: #62d2a2;
 }
@@ -908,5 +905,4 @@ a:focus {
 .footer_section .footer-info p a {
   color: inherit;
 }
-
 /*# sourceMappingURL=style.css.map */

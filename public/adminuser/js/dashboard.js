@@ -184,12 +184,12 @@
         data: {
           labels: ["Jan", "Feb", "Mar", "Apr", "May"],
           datasets: [{
-              label: 'Offline Sales',
+              label: 'Typhoon',
               data: [480, 230, 470, 210, 330],
               backgroundColor: '#98BDFF'
             },
             {
-              label: 'Online Sales',
+              label: 'Heavy Rain',
               data: [400, 340, 550, 480, 170],
               backgroundColor: '#4B49AC'
             }
@@ -251,6 +251,81 @@
         },
       });
       document.getElementById('sales-legend').innerHTML = SalesChart.generateLegend();
+    }
+    if ($("#sale-chart").length) {
+      var SalesChartCanvas = $("#sale-chart").get(0).getContext("2d");
+      var SalesChart = new Chart(SalesChartCanvas, {
+        type: 'bar',
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+          datasets: [{
+              label: 'Typhoon',
+              data: [480, 230, 470, 210, 330],
+              backgroundColor: '#98BDFF'
+            },
+            {
+              label: 'Heavy Rain',
+              data: [400, 340, 550, 480, 170],
+              backgroundColor: '#4B49AC'
+            }
+          ]
+        },
+        options: {
+          cornerRadius: 5,
+          responsive: true,
+          maintainAspectRatio: true,
+          layout: {
+            padding: {
+              left: 0,
+              right: 0,
+              top: 20,
+              bottom: 0
+            }
+          },
+          scales: {
+            yAxes: [{
+              display: true,
+              gridLines: {
+                display: true,
+                drawBorder: false,
+                color: "#F2F2F2"
+              },
+              ticks: {
+                display: true,
+                min: 0,
+                max: 560,
+                callback: function(value, index, values) {
+                  return  value + '$' ;
+                },
+                autoSkip: true,
+                maxTicksLimit: 10,
+                fontColor:"#6C7383"
+              }
+            }],
+            xAxes: [{
+              stacked: false,
+              ticks: {
+                beginAtZero: true,
+                fontColor: "#6C7383"
+              },
+              gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+                display: false
+              },
+              barPercentage: 1
+            }]
+          },
+          legend: {
+            display: false
+          },
+          elements: {
+            point: {
+              radius: 0
+            }
+          }
+        },
+      });
+      document.getElementById('sale-legend').innerHTML = SalesChart.generateLegend();
     }
     if ($("#sales-chart-dark").length) {
       var SalesChartCanvas = $("#sales-chart-dark").get(0).getContext("2d");
@@ -358,10 +433,10 @@
         legendCallback: function(chart) { 
           var text = [];
           text.push('<div class="report-chart">');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p class="mb-0">Offline sales</p></div>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p class="mb-0">Typhoon</p></div>');
             text.push('<p class="mb-0">88333</p>');
             text.push('</div>');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p class="mb-0">Online sales</p></div>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p class="mb-0">Heavy Rains</p></div>');
             text.push('<p class="mb-0">66093</p>');
             text.push('</div>');
             text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p class="mb-0">Returns</p></div>');
@@ -578,10 +653,10 @@
         legendCallback: function(chart) { 
           var text = [];
           text.push('<div class="report-chart">');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p class="mb-0">Offline sales</p></div>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[0] + '"></div><p class="mb-0">Heavy Rain</p></div>');
             text.push('<p class="mb-0">495343</p>');
             text.push('</div>');
-            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p class="mb-0">Online sales</p></div>');
+            text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[1] + '"></div><p class="mb-0"> Typhoon</p></div>');
             text.push('<p class="mb-0">630983</p>');
             text.push('</div>');
             text.push('<div class="d-flex justify-content-between mx-4 mx-xl-5 mt-3"><div class="d-flex align-items-center"><div class="mr-3" style="width:20px; height:20px; border-radius: 50%; background-color: ' + chart.data.datasets[0].backgroundColor[2] + '"></div><p class="mb-0">Returns</p></div>');

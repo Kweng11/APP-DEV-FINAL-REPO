@@ -4,7 +4,7 @@
         <div class="hero_bg_box">
            <img src="@/assets/agrisync/images/H.png" alt="">
            </div>
-                 
+    
         <header class="header_section" style="position: fixed; top: 0; left: 0; z-index: 9999; width: 100%; height: 100px; background-color: #00a087;">
             
 
@@ -29,8 +29,7 @@
                
             </a>
 
-        
-             
+               
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class=""> </span>  
                
@@ -48,11 +47,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/Contact">Contact</a>
                 </li>
-
-
+                
                 <li class="nav-item">
-                    <a class="nav-link"  href="/Login">Login</a>
-            </li>
+                    <a class="nav-link" href="/LGULogin">Log In </a>
+                </li>
+                
+            
                 <form class="form-inline">
                     <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                     <i class="fa fa-search" aria-hidden="true"></i>
@@ -63,6 +63,10 @@
             </nav>
         </div>
         </header>
+
+
+
+
 
         </div>
 </template>

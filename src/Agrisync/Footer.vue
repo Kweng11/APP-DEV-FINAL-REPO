@@ -1,6 +1,5 @@
 <template>
 
-    
     <!-- footer section -->
     <footer class="footer_section">
       <div class="container">
