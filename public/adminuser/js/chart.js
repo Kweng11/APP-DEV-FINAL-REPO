@@ -277,7 +277,33 @@ $(function() {
       options: options
     });
   }
-
+  if ($("#barChart2").length) {
+    var barChartCanvas = $("#barChart2").get(0).getContext("2d");
+    // This will get the first returned node in the jQuery collection.
+    var barChart = new Chart(barChartCanvas, {
+      type: 'bar',
+      data: data,
+      options: options
+    });
+  }
+  if ($("#barChart3").length) {
+    var barChartCanvas = $("#barChart3").get(0).getContext("2d");
+    // This will get the first returned node in the jQuery collection.
+    var barChart = new Chart(barChartCanvas, {
+      type: 'bar',
+      data: data,
+      options: options
+    });
+  }
+  if ($("#barChart4").length) {
+    var barChartCanvas = $("#barChart4").get(0).getContext("2d");
+    // This will get the first returned node in the jQuery collection.
+    var barChart = new Chart(barChartCanvas, {
+      type: 'bar',
+      data: data,
+      options: options
+    });
+  }
   if ($("#lineChart").length) {
     var lineChartCanvas = $("#lineChart").get(0).getContext("2d");
     var lineChart = new Chart(lineChartCanvas, {
@@ -286,7 +312,32 @@ $(function() {
       options: options
     });
   }
-
+  if ($("#lineChart2").length) {
+    var lineChartCanvas = $("#lineChart2").get(0).getContext("2d");
+    var lineChart = new Chart(lineChartCanvas, {
+      type: 'line',
+      data: data,
+      options: options
+    });
+  }
+  if ($("#lineChart3").length) {
+    var lineChartCanvas = $("#lineChart3").get(0).getContext("2d");
+    var lineChart = new Chart(lineChartCanvas, {
+      type: 'line',
+      data: data,
+      options: options
+    });
+  }
+  if ($("#lineChart4").length) {
+    var lineChartCanvas = $("#lineChart4").get(0).getContext("2d");
+    var lineChart = new Chart(lineChartCanvas, {
+      type: 'line',
+      data: data,
+      options: options
+    });
+  }
+  
+ 
   if ($("#linechart-multi").length) {
     var multiLineCanvas = $("#linechart-multi").get(0).getContext("2d");
     var lineChart = new Chart(multiLineCanvas, {

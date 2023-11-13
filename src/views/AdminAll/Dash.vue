@@ -1,23 +1,21 @@
-<template>
-
-    <AdminNavbar/>
-    <AdminForms/>
-
-    <AdminSettings/>
-    <AdminFooter/>
+<template>  
+    
+    
+   
+    <Line/>
+    <Settings/>
+    <Foo/>
 </template>
 
 <script>
-import AdminNavbar from '@/components/Admin/AdminNavbar.vue';
-import AdminForms from '@/components/Admin/AdminForms.vue';
 
-import AdminSettings from '@/components/Admin/AdminSettings.vue';
-import AdminFooter from '@/components/Admin/AdminFooter.vue';
-
+import  Line from '@/components/Admin/AdminLineChart.vue';
+import Settings from '@/components/AllDashboard/Settings.vue';
+import Foo from '@/components/AllDashboard/Foo.vue';
 
 export default {
-name: 'Table',
-  components: {AdminNavbar,AdminForms,AdminSettings,AdminFooter },
+name: 'Dash',
+  components: {Line,Settings,Foo },
   mounted() {
   const scriptPaths = [
 './adminuser/vendors/js/vendor.bundle.base.js',
@@ -31,8 +29,9 @@ name: 'Table',
 './adminuser/js/settings.js',
 './adminuser/js/todolist.js',
 './adminuser/js/dashboard.js',
-'./adminyser/js/Chart.roundedBarCharts.js',
-    
+'./adminuser/js/Chart.roundedBarCharts.js',
+'./adminuser/js/chart.js',
+
   ];
       
   const loadScript = (path) => {

@@ -1,15 +1,15 @@
 <template>  
-    
-        <Dashboard/>
 
+        <Rom/>
+      
     </template>
     
     <script>
-    import Dashboard from '@/views/Admin/Dashboard.vue';
-    
+  import Rom from '@/views/ALD/Occi.vue';
+
     export default {
-    name: 'Dashboard',
-      components: {Dashboard },
+    name: 'Mindoro',
+      components: {Rom},
       mounted() {
       const scriptPaths = [
       '/adminuser/vendors/js/vendor.bundle.base.js',
@@ -25,7 +25,9 @@
           '/adminuser/js/dashboard.js',
           '/adminyser/js/Chart.roundedBarCharts.js',
           '/adminuser/js/chart.js',
-        
+          '/public/dashboardjs/init-alpine.js',
+           'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js',
+              
       ];
     
       const loadScript = (path) => {
@@ -62,4 +64,6 @@
     @import'@/assets/adminuser/vendors/ti-icons/css/themify-icons.css';
     @import'@/assets/adminuser/js/select.dataTables.min.css';
     @import'@/assets/adminuser/css/vertical-layout-light/style.css';
+    
+    
     </style>
