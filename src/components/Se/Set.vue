@@ -1,7 +1,11 @@
 <template>
-  <div class="container-scroller">
-<div class="container-fluid page-body-wrapper">
-  <nav class="sidebar sidebar-offcanvas" id="sidebar">
+   
+    <div class="container-scroller">
+    
+    <div class="container-fluid page-body-wrapper">
+
+
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
      <ul class="nav">
        <li class="nav-item">
        <a class="nav-link" href="/AdminHome">
@@ -116,52 +120,34 @@
      </ul>
   </nav>
     <div class="main-panel">
-      <div class="content-wrapper">
-        <div class="row">
-          <div class="col-lg-6 grid-margin stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Line chart</h4>
-                <canvas id="lineChart"></canvas>
-              </div>
-            </div>
-          </div>
 
-       
-          <div class="col-lg-6 grid-margin stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Bar chart</h4>
-                <canvas id="barChart"></canvas>
-              </div>
-            </div>
-       </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Password</h5>
+                            <form>
+                                <div class="form-group">
+                                    <label for="inputEmail">Email </label>
+                                    <input type="email" class="form-control" id="inputEmail" required>
+                             
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">New password</label>
+                                    <input type="password" class="form-control" id="password" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm_password">Verify password</label>
+                                    <input type="password" class="form-control" id="confirm_password" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Apply</button> <span>    </span>
+                                <button type="reset" class="btn btn-primary">Cancel</button>
+                            </form>
+                        </div>
+                        </div>
+                </div>
+             </div>
+          <!-- page-body-wrapper ends -->
+    </div>
+      <!-- container-scroller -->
+      
+    </template>
 
-       <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Pie chart</h4>
-                <canvas id="pieChart"></canvas>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
-            <div class="card">
-              <div class="card-body">
-                <h4 class="card-title">Pie chart</h4>
-                <canvas id="pieChart"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-        </div>
-       
-   
-     
-        <!-- main-panel ends -->
-  </div>
-  <!-- page-body-wrapper ends -->
-</div>
-<!-- container-scroller -->
-</template>

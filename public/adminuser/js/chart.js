@@ -304,6 +304,15 @@ $(function() {
       options: options
     });
   }
+  if ($("#barChart5").length) {
+    var barChartCanvas = $("#barChart5").get(0).getContext("2d");
+    // This will get the first returned node in the jQuery collection.
+    var barChart = new Chart(barChartCanvas, {
+      type: 'bar',
+      data: data,
+      options: options
+    });
+  }
   if ($("#lineChart").length) {
     var lineChartCanvas = $("#lineChart").get(0).getContext("2d");
     var lineChart = new Chart(lineChartCanvas, {
@@ -330,6 +339,14 @@ $(function() {
   }
   if ($("#lineChart4").length) {
     var lineChartCanvas = $("#lineChart4").get(0).getContext("2d");
+    var lineChart = new Chart(lineChartCanvas, {
+      type: 'line',
+      data: data,
+      options: options
+    });
+  }
+  if ($("#lineChart5").length) {
+    var lineChartCanvas = $("#lineChart5").get(0).getContext("2d");
     var lineChart = new Chart(lineChartCanvas, {
       type: 'line',
       data: data,

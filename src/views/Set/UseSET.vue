@@ -1,39 +1,40 @@
 <template>  
-    
-    
-   <Nav/>
-    <Line/>
-    <Settings/>
+
+    <Se/>
+    <Na/>
     <Foo/>
 </template>
 
 <script>
-import  Nav from '@/components/Admin/AdminNavbar.vue';
-import  Line from '@/components/Admin/AdminLineChart.vue';
-import Settings from '@/components/AllDashboard/Settings.vue';
-import Foo from '@/components/AllDashboard/Foo.vue';
-
+import Se from '@/components/Se/UseSET.vue';
+import Na  from '@/components/User/LGUNavbar.vue';
+import Foo from '@/components/User/LGUFooter.vue';
 export default {
-name: 'Dash',
-  components: {Nav,Line,Settings,Foo },
+
+name: 'UseSET',
+  components: {Se,Na,Foo},
   mounted() {
   const scriptPaths = [
-'./adminuser/vendors/js/vendor.bundle.base.js',
-'./adminuser/vendors/chart.js/Chart.min.js',
-'./adminuser/vendors/datatables.net/jquery.dataTables.js',
-'./adminuser/vendors/datatables.net-bs4/dataTables.bootstrap4.js',
-'./adminuser/js/dataTables.select.min.js',
-'./adminuser/js/off-canvas.js',
-'./adminuser/js/hoverable-collapse.js',
-'./adminuser/js/template.js',
-'./adminuser/js/settings.js',
-'./adminuser/js/todolist.js',
-'./adminuser/js/dashboard.js',
-'./adminuser/js/Chart.roundedBarCharts.js',
-'./adminuser/js/chart.js',
-
-  ];
+  '/adminuser/vendors/js/vendor.bundle.base.js',
+      '/adminuser/vendors/chart.js/Chart.min.js',
+      '/adminuser/vendors/datatables.net/jquery.dataTables.js',
+      '/adminuser/vendors/datatables.net-bs4/dataTables.bootstrap4.js',
+      '/adminuser/js/dataTables.select.min.js',
+      '/adminuser/js/off-canvas.js',
+      '/adminuser/js/hoverable-collapse.js',
+      '/adminuser/js/template.js',
+      '/adminuser/js/settings.js',
+      '/adminuser/js/todolist.js',
+      '/adminuser/js/dashboard.js',
+      '/adminuser/js/login.js',
+      '/adminyser/js/Chart.roundedBarCharts.js',
+      '/adminuser/js/chart.js',
       
+      '/public/dashboardjs/init-alpine.js',
+       'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js',
+          
+  ];
+
   const loadScript = (path) => {
   return new Promise((resolve, reject) => {
       const script = document.createElement('script');
@@ -55,9 +56,16 @@ name: 'Dash',
   }
   };
   loadScripts();
+
+
+
+
+
 }
 }
+
 </script>
+
 
 <style scoped>
 @import '@/assets/adminuser/vendors/feather/feather.css';
@@ -67,4 +75,6 @@ name: 'Dash',
 @import'@/assets/adminuser/vendors/ti-icons/css/themify-icons.css';
 @import'@/assets/adminuser/js/select.dataTables.min.css';
 @import'@/assets/adminuser/css/vertical-layout-light/style.css';
+
+
 </style>

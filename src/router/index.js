@@ -23,6 +23,8 @@ import RomT from '../views/ALD/RomT.vue'
 import Rom from '../views/ALD/Rom.vue'
 import Mar from '../views/ALD/Mar.vue'
 import MarT from '../views/ALD/MarT.vue'
+import Set from '../views/Set/Set.vue'
+import UseSET from '../views/Set/UseSET.vue'
 const routes = [
   {
     path: '/',
@@ -144,6 +146,16 @@ const routes = [
           path: '/MarT',
           name: 'MarT',
           component:MarT
+        },
+        {
+          path: '/Set',
+          name: 'Set',
+          component: Set
+        },
+        {
+          path: '/UseSET',
+          name: 'UseSET',
+          component:UseSET
         },
 
 
