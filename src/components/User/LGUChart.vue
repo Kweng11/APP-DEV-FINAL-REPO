@@ -28,24 +28,17 @@
               <span class="menu-title">Table</span>
             </a>
           </li>
-       <li class="nav-item">
-         <a class="nav-link" href="/UseSET">
-           <i class="icon-columns menu-icon"></i>
-           <span class="menu-title">Change Password</span>
-         </a>
-       </li>
-    
-    
-       <li class="nav-item">
-         <a class="nav-link" href="/">
-           <i class="icon-head menu-icon"></i>
-           <span class="menu-title">Log Out</span>
-         </a>
-       </li>
-
-
-     </ul>
-  </nav>
+       
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">Log Out</span>
+            </a>
+          </li>
+  
+  
+        </ul>
+      </nav>
 
       <div class="main-panel">
         <div class="content-wrapper">
@@ -54,7 +47,7 @@
             <div class="col-lg-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Report</h4>
+                  <h4 class="card-title">Line chart</h4>
                   <canvas id="lineChart"></canvas>
                 </div>
               </div>
@@ -63,14 +56,40 @@
             <div class="col-lg-6 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title"></h4>
+                  <h4 class="card-title">Bar chart</h4>
                   <canvas id="barChart"></canvas>
                 </div>
               </div>
             </div>
           </div>
-
-      
+          <div class="row">
+            <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Area chart</h4>
+                  <canvas id="areaChart"></canvas>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Doughnut chart</h4>
+                  <canvas id="doughnutChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6 grid-margin grid-margin-lg-0 stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Pie chart</h4>
+                  <canvas id="pieChart"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- main-panel ends -->

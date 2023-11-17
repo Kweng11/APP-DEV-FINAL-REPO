@@ -2,7 +2,7 @@
 
     <LGUNavbar/>
     <LGUForm/>
-
+    <LGUT/>
     <LGUSettings/>
     <LGUFooter/>
 </template>
@@ -10,14 +10,14 @@
 <script>
 import LGUNavbar from '@/components/User/LGUNavbar.vue';
 import LGUForm from '@/components/User/LGUForms.vue';
-
+import LGUT from '@/components/User/LGUT.vue'
 import LGUSettings from '@/components/User/LGUSettings.vue';
 import LGUFooter from '@/components/User/LGUFooter.vue';
 
 
 export default {
 name: 'LGUTable',
-  components: {LGUNavbar,LGUForm,LGUSettings,LGUFooter },
+  components: {LGUNavbar,LGUForm,LGUT,LGUSettings,LGUFooter },
   mounted() {
   const scriptPaths = [
 './adminuser/vendors/js/vendor.bundle.base.js',

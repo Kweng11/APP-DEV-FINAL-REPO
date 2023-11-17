@@ -2,7 +2,6 @@
    <div class="container-scroller">
   <div class="container-fluid page-body-wrapper">
   
-
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
      <ul class="nav">
        <li class="nav-item">
@@ -99,13 +98,6 @@
            <span class="menu-title">Table</span>
          </a>
        </li>
-       <li class="nav-item">
-         <a class="nav-link" href="/Set">
-           <i class="icon-columns menu-icon"></i>
-           <span class="menu-title">Change Password</span>
-         </a>
-       </li>
-    
     
        <li class="nav-item">
          <a class="nav-link" href="/">
@@ -232,8 +224,7 @@
             <div class="col-md-12 grid-margin stretch-card">
             <div class="col-md-6 grid-margin stretch-card">
               <div class="card">
-          </div>
-          </div>                <div class="card-body">
+                <div class="card-body">
                  <div class="d-flex justify-content-between">
                   <p class="card-title">Reports</p>
                                </div>
@@ -243,7 +234,8 @@
                 </div>
               </div>
             </div>
-
+          </div>
+          </div>
           
                </div>
 

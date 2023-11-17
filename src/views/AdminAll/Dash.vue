@@ -1,21 +1,21 @@
 <template>  
     
     
-   <Nav/>
+   
     <Line/>
     <Settings/>
     <Foo/>
 </template>
 
 <script>
-import  Nav from '@/components/Admin/AdminNavbar.vue';
+
 import  Line from '@/components/Admin/AdminLineChart.vue';
 import Settings from '@/components/AllDashboard/Settings.vue';
 import Foo from '@/components/AllDashboard/Foo.vue';
 
 export default {
 name: 'Dash',
-  components: {Nav,Line,Settings,Foo },
+  components: {Line,Settings,Foo },
   mounted() {
   const scriptPaths = [
 './adminuser/vendors/js/vendor.bundle.base.js',

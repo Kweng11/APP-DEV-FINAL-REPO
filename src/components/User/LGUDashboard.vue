@@ -28,24 +28,17 @@
               <span class="menu-title">Table</span>
             </a>
           </li>
-       <li class="nav-item">
-         <a class="nav-link" href="/UseSET">
-           <i class="icon-columns menu-icon"></i>
-           <span class="menu-title">Change Password</span>
-         </a>
-       </li>
-    
-    
-       <li class="nav-item">
-         <a class="nav-link" href="/">
-           <i class="icon-head menu-icon"></i>
-           <span class="menu-title">Log Out</span>
-         </a>
-       </li>
-
-
-     </ul>
-  </nav>
+       
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">Log Out</span>
+            </a>
+          </li>
+  
+  
+        </ul>
+      </nav>
   <div class="main-panel">
     <div class="content-wrapper">
           <div class="row">

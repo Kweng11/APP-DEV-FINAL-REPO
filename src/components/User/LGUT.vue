@@ -19,8 +19,8 @@
                           <th>No. of Cans</th>
                           <th> Seedling Date</th>
                           <th> Expected No. of Area</th>
-                          <th>Damagedd By Typhoon (ha)</th>
-                          <th>Damagedd By Typhoon (ha)</th>
+                          <th>Damaged By Typhoon (ha)</th>
+                          <th>Damaged By Typhoon (ha)</th>
                           <th> Damaged By Heavy Rains(HA)</th>
                           <th>Total Damaged(HA)</th>
                           <th>No. of Cans Damaged</th>

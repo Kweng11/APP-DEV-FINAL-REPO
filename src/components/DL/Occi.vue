@@ -2,7 +2,6 @@
     <div class="container-scroller">
    <div class="container-fluid page-body-wrapper">
     
-
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
      <ul class="nav">
        <li class="nav-item">
@@ -99,13 +98,6 @@
            <span class="menu-title">Table</span>
          </a>
        </li>
-       <li class="nav-item">
-         <a class="nav-link" href="/Set">
-           <i class="icon-columns menu-icon"></i>
-           <span class="menu-title">Change Password</span>
-         </a>
-       </li>
-    
     
        <li class="nav-item">
          <a class="nav-link" href="/">

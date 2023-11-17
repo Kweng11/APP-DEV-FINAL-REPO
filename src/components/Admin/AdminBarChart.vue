@@ -97,13 +97,6 @@
            <span class="menu-title">Table</span>
          </a>
        </li>
-       <li class="nav-item">
-         <a class="nav-link" href="/Set">
-           <i class="icon-columns menu-icon"></i>
-           <span class="menu-title">Change Password</span>
-         </a>
-       </li>
-    
     
        <li class="nav-item">
          <a class="nav-link" href="/">
