@@ -55,31 +55,33 @@
                     Report
                   </p>
                   <form class="forms-sample" @submit.prevent="save">
-                    <div class="form-group">
-                      <label for="NameofFramer">Name of Farmer</label>
-                      <input type="text" class="form-control" v-model="Name" id="Name" placeholder="Name of Farmer">
-                    </div>
-                    <div class="form-group">
-                      <label for="FarmerLocation">Farmer Location</label>
-                      <input type="text" class="form-control" v-model="location" id="location" placeholder="Farmer Location">
-                    </div>
-                    <div class="form-group">
-                      <label for="NoofCans">No. of Cans</label>
-                      <input type="number" class="form-control" v-model="cans" id="cans" placeholder="No. of Cans">
-                    </div>
-                    <div class="form-group">
-                      <label for="SeedlingDate">Seedling Date</label>
-                      <input type="date" class="form-control" v-model="date" id="date"  placeholder="Seedling Date">
-                    </div>
+                <div class="form-group">
+                  <label for="NameofFramer">Name of Farmer</label>
+                  <input type="text" class="form-control" v-model="Name" id="Name" placeholder="Name of Farmer">
+                </div>
+                <div class="form-group">
+                  <label for="FarmerLocation">Farmer Location</label>
+                  <input type="text" class="form-control" v-model="location" id="location" placeholder="Farmer Location">
+                </div>
+                <div class="form-group">
+                  <label for="NoofCans">No. of Cans</label>
+                  <input type="number" class="form-control" v-model="nocans" id="cans" placeholder="No. of Cans">
+                </div>
+                <div class="form-group">
+                  <label for="SeedlingDate">Seedling Date</label>
+                  <input type="date" class="form-control" v-model="seeddate" id="date" placeholder="Seedling Date">
+                </div>
+
+                <div class="form-group">
+                  <label for="NoofArea">Expected No. of Area</label>
+                  <input type="text" class="form-control" v-model="area" id="area" placeholder="Expected No of Area">
+                </div>
+
+                <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+              </form>
+
                                 
-                    <div class="form-group">
-                      <label for="NoofArea">Expected No. of Area</label>
-                      <input type="text" class="form-control" v-model="area" id="area" placeholder="Expected No of Area">
-                    </div>
-                  
-                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                    <button class="btn btn-light">Cancel</button>
-                  </form>
                   <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Damages</h4>
@@ -94,7 +96,7 @@
                     </div>
                                      <div class="form-group">
                       <label for="Rain"> Damaged By Heavy Rains(HA)</label>
-                      <input type="text" class="form-control" v-model="heavyRain" id="heavyRain" placeholder=" Damaged By Heavy Rains">
+                      <input type="text" class="form-control" v-model="heavyrains" id="heavyRain" placeholder=" Damaged By Heavy Rains">
                     </div>
         
                       <div class="form-group">
@@ -191,11 +193,11 @@ data(){
   return{
 Name: "", 
 location: "", 
-cans: "", 
-date: "", 
-area: "", 
+nocans: "", 
+seeddate: "", 
+area: "",
 typhoon: "", 
-heavyRain: "", 
+heavyrains: "", 
 total: "", 
 standcrop: "", 
 transdate: "", 
@@ -211,8 +213,8 @@ methods:{
       const ins = await axios.post('save',{
         Name: this.Name,
         location: this.location,
-        cans: this.cans,
-        date: this.date,
+        nocans: this.nocans,
+        seeddate: this.seeddate,
         area: this.area,
       })
     } catch (error) {
@@ -224,7 +226,7 @@ methods:{
     try {
       const ins = await axios.post('save2',{
         typhoon: this.typhoon,
-        heavyRain: this.heavyRain,
+        heavyrains: this.heavyrains,
         total: this.total,
       })
     } catch (error) {

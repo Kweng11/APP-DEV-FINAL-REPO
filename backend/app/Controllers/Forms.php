@@ -24,8 +24,8 @@ class Forms extends ResourceController
         $data = [
             'Name' => $json->Name,
             'location' => $json->location,
-            'cans' => $json->cans,
-            'date' => $json->date,
+            'nocans' => $json->nocans,
+            'seeddate' => $json->seeddate,
             'area' => $json->area,
         ];
 
@@ -38,7 +38,7 @@ class Forms extends ResourceController
         $json = $this->request->getJSON();
         $data = [
             'typhoon' => $json->typhoon,
-            'heavyrain' => $json->heavyrain,
+            'heavyrains' => $json->heavyrains,
             'total' => $json->total,
         ];
 

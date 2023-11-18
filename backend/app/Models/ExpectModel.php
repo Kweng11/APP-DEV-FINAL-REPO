@@ -13,7 +13,7 @@ class ExpectModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['date', 'area', 'volume'];
+    protected $allowedFields    = ['expdate', 'exparea', 'expvolume'];
 
     // Dates
     protected $useTimestamps = false;

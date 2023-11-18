@@ -13,7 +13,7 @@ class InfoModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['Name', 'location', 'numcans', 'seeddate', 'exparea'];
+    protected $allowedFields    = ['Name', 'location', 'nocans', 'seeddate', 'area'];
 
     // Dates
     protected $useTimestamps = false;
