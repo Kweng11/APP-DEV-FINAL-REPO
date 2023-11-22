@@ -31,7 +31,7 @@ name: 'LGUTable',
 './adminuser/js/settings.js',
 './adminuser/js/todolist.js',
 './adminuser/js/dashboard.js',
-'./adminyser/js/Chart.roundedBarCharts.js',
+'./adminuser/js/Chart.roundedBarCharts.js',
     
   ];
       

@@ -2,7 +2,7 @@
 
     <AdminNavbar/>
     <AdminForms/>
-
+    <AdminTable/>
     <AdminSettings/>
     <AdminFooter/>
 </template>
@@ -10,14 +10,14 @@
 <script>
 import AdminNavbar from '@/components/Admin/AdminNavbar.vue';
 import AdminForms from '@/components/Admin/AdminForms.vue';
-
+import AdminTable from '@/components/Admin/AdminTable.vue';
 import AdminSettings from '@/components/Admin/AdminSettings.vue';
 import AdminFooter from '@/components/Admin/AdminFooter.vue';
 
 
 export default {
 name: 'Table',
-  components: {AdminNavbar,AdminForms,AdminSettings,AdminFooter },
+  components: {AdminNavbar,AdminForms,AdminTable,AdminSettings,AdminFooter },
   mounted() {
   const scriptPaths = [
 './adminuser/vendors/js/vendor.bundle.base.js',

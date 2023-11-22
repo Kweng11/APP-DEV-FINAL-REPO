@@ -71,26 +71,17 @@
                   <label for="SeedlingDate">Seedling Date</label>
                   <input type="date" class="form-control" v-model="seeddate" id="date" placeholder="Seedling Date">
                 </div>
-
                 <div class="form-group">
                   <label for="NoofArea">Expected No. of Area</label>
                   <input type="text" class="form-control" v-model="area" id="area" placeholder="Expected No of Area">
                 </div>
-
-                <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                <button class="btn btn-light">Cancel</button>
-              </form>
-
-                                
-                  <div class="card">
+                <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Damages</h4>
                   <p class="card-description">
                     Report
                   </p>
-                  <form class="forms-sample" @submit.prevent = "save2">
-                                 
-                    <div class="form-group">
+                  <div class="form-group">
                       <label for="DamegeTyphoon">Damaged By Typhoon (ha)</label>
                       <input type="text" class="form-control" v-model="typhoon" id="typhoon" placeholder=" Damaged By Typhoon">
                     </div>
@@ -102,26 +93,15 @@
                       <div class="form-group">
                       <label for="Toatal">Total Damaged(HA)</label>
                       <input type="text" class="form-control" v-model="total" id="total" placeholder=" TotalDamagedd">
-                    </div>
-                                                      
-                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                    <button class="btn btn-light">Cancel</button>
-                  </form>
+                    </div>     
                 </div>
               </div>
-      
-         
-            
-
-          
-         
-          <div class="card">
+              <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">Status</h4>
                   <p class="card-description">
                     Report
                   </p>
-                  <form class="forms-sample" @submit.prevent="save3">
                   <div class="form-group">
                       <label for="StandingCrop">Standing Crop</label>
                       <input type="text" class="form-control" v-model="standcrop" id="standcrop" placeholder="StandingbCrop">
@@ -130,13 +110,7 @@
                       <label for="TransplateDate">Transplant Date</label>
                       <input type="date" class="form-control" v-model="transdate" id="transdate" placeholder="Transplate Date">
                     </div>
-                  
-                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                    <button class="btn btn-light">Cancel</button>
-               
-                  </form>
-                      
-                </div>
+                  </div>
               </div>
               <div class="card">
                 <div class="card-body">
@@ -144,8 +118,7 @@
                   <p class="card-description">
                     Report
                   </p>
-                  <form class="forms-sample" @submit.prevent="save4">
-              <div class="form-group">
+                  <div class="form-group">
                       <label for="ExpectedDate">Expected Date of Harvest</label>
                       <input type="date" class="form-control" v-model="expdate" id="expdate" placeholder="Expected Date of Harvest">
                     </div>
@@ -157,28 +130,15 @@
                       <label for="ExpectedVolume">Expected Volume of Harvest (MT)</label>
                       <input type="number" class="form-control" v-model="expvolume" id="expvolume" placeholder="Expected Volume of Harvest">
                     </div>
-                                    
-                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                    <button class="btn btn-light">Cancel</button>
-                    
-               
-                  </form>
-                      
-                    </div>
                   </div>
-        
-
-                </div>
-              </div>
-
-
-
-
-
-              
+                  </div>
+                  <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+              </form>
             </div>
-        
- </div>
+              </div>
+            </div>
+          </div>
  <!-- main-panel ends -->
 </div>
 <!-- page-body-wrapper ends -->
@@ -216,47 +176,19 @@ methods:{
         nocans: this.nocans,
         seeddate: this.seeddate,
         area: this.area,
-      })
-    } catch (error) {
-      console.log(error);
-    }
-  },
-  async save2()
-  {
-    try {
-      const ins = await axios.post('save2',{
         typhoon: this.typhoon,
         heavyrains: this.heavyrains,
         total: this.total,
-      })
-    } catch (error) {
-      console.log(error);
-    }
-  },
-  async save3()
-  {
-    try {
-      const ins = await axios.post('save3',{
         standcrop: this.standcrop,
         transdate: this.transdate,
-      })
-    } catch (error) {
-      console.log(error);
-    }
-  },
-  async save4()
-  {
-    try {
-      const ins = await axios.post('save4',{
         expdate: this.expdate,
         exparea: this.exparea,
         expvolume: this.expvolume,
-      })
+      });
     } catch (error) {
       console.log(error);
     }
   }
-  
 }
 }
 </script>
