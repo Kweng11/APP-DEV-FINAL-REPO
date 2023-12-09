@@ -27,7 +27,7 @@
           '/adminuser/js/settings.js',
           '/adminuser/js/todolist.js',
           '/adminuser/js/dashboard.js',
-          '/adminyser/js/Chart.roundedBarCharts.js',
+          '/adminuser/js/Chart.roundedBarCharts.js',
           '/adminuser/js/chart.js',
           '/public/dashboardjs/init-alpine.js',
            'https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js',

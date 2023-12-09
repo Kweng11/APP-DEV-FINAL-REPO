@@ -73,9 +73,6 @@
                   <img src="@/assets/agrisync/images/614_256.jpg" alt="people" width="100">
                   <div class="weather-info">
                     <div class="d-flex">
-                      <div>
-                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>C</sup></h2>
-                      </div>
                       <div class="ml-2">
                         <h4 class="location font-weight-normal">Oriental Mindoro</h4>
                         <h6 class="font-weight-normal">Philippines</h6>
@@ -91,9 +88,9 @@
                   <div class="card card-tale">
                     <div class="card-body">
                       <p class="mb-4">Number of Farmers</p>
-                      <p class="fs-30 mb-2">34040</p>
-                      <p>2.00% (30 days)</p>
-                    </div>
+                      <p class="fs-30 mb-2">{{ farmersCount }}</p>
+                      <p>{{ percentage }} (30 days)</p>
+                      </div>
                     </div>
                   
                 </div>
@@ -101,7 +98,7 @@
                   <div class="card card-dark-blue">
                     <div class="card-body">
                       <p class="mb-4">Total Damage </p>
-                      <p class="fs-30 mb-2">4006</p>
+                      <p class="fs-30 mb-2">{{ totalDamage }}</p>
                       <p>10.00% (30 days)</p>
                     </div>
                   </div>
@@ -111,7 +108,7 @@
                   <div class="card card-light-blue">
                     <div class="card-body">
                       <p class="mb-4"> Standing Crop</p>
-                      <p class="fs-30 mb-2">61344</p>
+                      <p class="fs-30 mb-2">{{standingCrop}}</p>
                       <p>22.00% (30 days)</p>
                     </div>
                   </div>
@@ -119,8 +116,8 @@
                 <div class="col-md-6 stretch-card transparent">
                   <div class="card card-light-danger">
                     <div class="card-body">
-                      <p class="mb-4">Number of Cans Damage</p>
-                      <p class="fs-30 mb-2">47033</p>
+                      <p class="mb-4">Number of Cans</p>
+                      <p class="fs-30 mb-2">{{numcans}}</p>
                       <p>0.22% (30 days)</p>
                     </div>
                   </div>
@@ -128,46 +125,22 @@
               </div>
             </div>
            <div class="row">
+            
             <div class="col-md-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-title">Seedling date</p>
-                  <p class="font-weight-500"></p>
-                  <div class="d-flex flex-wrap mb-5">
-                    <div class="mr-5 mt-3">
-                      <p class="text-muted"></p>
-                      <h3 class="text-primary fs-30 font-weight-medium">12.3k</h3>
-                    </div>
-                    <div class="mr-5 mt-3">
-                      <p class="text-muted">January</p>
-                      <h3 class="text-primary fs-30 font-weight-medium">14k</h3>
-                    </div>
-                    <div class="mr-5 mt-3">
-                      <p class="text-muted">March</p>
-                      <h3 class="text-primary fs-30 font-weight-medium">71.56%</h3>
-                    </div>
-                    <div class="mt-3">
-                      <p class="text-muted">May</p>
-                      <h3 class="text-primary fs-30 font-weight-medium">34040</h3>
-                    </div> 
-                  </div>
-                  <canvas id="order-chart"></canvas>
-                </div>
-              </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <p class="card-title">Reports</p>
             </div>
-   
-            <div class="col-md-6 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                 <div class="d-flex justify-content-between">
-                  <p class="card-title">Reports</p>
-                               </div>
-                  <p class="font-weight-500">Total Damage </p>
-                  <div id="sales-legend" class="chartjs-legend mt-4 mb-2"></div>
-                  <canvas id="sales-chart"></canvas>
-                </div>
-              </div>
-            </div>
+            <p class="font-weight-500">Number of Cans</p>
+            <canvas ref="lineChartCanvas"></canvas>
+          </div>
+        </div>
+      </div>
+            <div class="col-md-6 mt-3">
+              <p style="text-align: center;">Total Damages</p>
+              <canvas ref="barChartCanvas"></canvas>
+                              </div>
           </div>
           <div class="row">
             <div class="col-md-12 grid-margin stretch-card">
@@ -195,65 +168,32 @@
                                   <table class="table table-borderless report-table">
                                     <tr>
                                       <td class="text-muted">Number of farmers</td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">1200</h5></td>
+                                      <td><h5 class="font-weight-bold mb-0">{{farmersCount}}</h5></td>
                                     </tr>
                                     <tr>
                                       <td class="text-muted">Number of Cans</td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">1000</h5></td>
+                                      <td><h5 class="font-weight-bold mb-0">{{numcans}}</h5></td>
                                     </tr>
                                     <tr>
                                       <td class="text-muted">Standing Crops</td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">924</h5></td>
+                                      <td><h5 class="font-weight-bold mb-0">{{standingCrop}}</h5></td>
                                     </tr>
                                     <tr>
                                       <td class="text-muted">Total Damaged of Heavy Rain</td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">664</h5></td>
+                                      <td><h5 class="font-weight-bold mb-0">{{heavyRain}}</h5></td>
                                     </tr>
                                     <tr>
-                                      <td class="text-muted">Tatal Damaged of Typhoon</td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-primary" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">560</h5></td>
+                                      <td class="text-muted">Total Damaged of Typhoon</td>
+                                      <td><h5 class="font-weight-bold mb-0">{{Typhoon}}</h5></td>
                                     </tr>
                                     <tr>
                                       <td class="text-muted">No of Cans Damaged</td>
-                                      <td class="w-100 px-0">
-                                        <div class="progress progress-md mx-4">
-                                          <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                      </td>
-                                      <td><h5 class="font-weight-bold mb-0">793</h5></td>
+                                      <td><h5 class="font-weight-bold mb-0">{{totalDamage}}</h5></td>
                                     </tr>
                                   </table>
                                 </div>
                               </div>
-                              <div class="col-md-6 mt-3">
-                                <canvas id="north-america-chart"></canvas>
-                                <div id="north-america-legend"></div>
-                              </div>
+                              
                             </div>
                           </div>
                         </div>
@@ -273,3 +213,158 @@
   <!-- container-scroller -->
 
 </template>
+<script>
+import axios from 'axios';
+import { Chart } from 'chart.js/auto';
+
+export default {
+  data() {
+    return {
+      farmersCount: 0,
+      percentage: '0.00',
+      totalDamage: 0,
+      standingCrop: 0,
+      numcans: 0,
+      heavyRain: 0,
+      Typhoon: 0,
+    };
+  },
+  async created() {
+    try {
+      const response = await axios.get('GetData');
+      const data = response.data;
+      console.log(data);
+
+      this.farmersCount = data.length;
+
+      this.percentage = ((data.length / 34040) * 100).toFixed(2) + '%';
+
+      data.forEach((record) => {
+        this.totalDamage += parseInt(record.total, 10) || 0;
+        this.standingCrop += parseInt(record.standcrop, 10) || 0;
+        this.numcans += parseInt(record.nocans, 10) || 0;
+        this.heavyRain += parseInt(record.heavyrains, 10) || 0;
+        this.Typhoon += parseInt(record.typhoon, 10) || 0;
+      });
+
+      console.log(this.totalDamage);
+
+      // Call the function to create the line chart
+      this.createLineChart(data.map(record => record.nocans));
+
+      // Call the function to create the bar chart for Typhoon and Heavy Rain damages
+      this.createBarChart(data.map(record => ({
+        typhoon: record.typhoon,
+        heavyRains: record.heavyrains,
+      })));
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  methods: {
+    createLineChart(monthlyData) {
+      const lineChartCanvas = this.$refs.lineChartCanvas;
+
+      new Chart(lineChartCanvas, {
+        type: 'line',
+        data: {
+          labels: Array.from({ length: monthlyData.length }, (_, i) => `Month ${i + 1}`),
+          datasets: [{
+            label: 'Number of Cans',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 2,
+            data: monthlyData,
+            fill: false,
+          }],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          scales: {
+            xAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Months',
+              },
+            }],
+            yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Number of Cans',
+              },
+            }],
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+          layout: {
+            padding: {
+              left: 10,
+              right: 10,
+              top: 10,
+              bottom: 10,
+            },
+          },
+          elements: {
+            line: {
+              borderWidth: 2,
+            },
+            point: {
+              radius: 0,
+            },
+          },
+        },
+      });
+    },
+    createBarChart(damagesData) {
+      const barChartCanvas = this.$refs.barChartCanvas;
+
+      new Chart(barChartCanvas, {
+        type: 'bar',
+        data: {
+          labels: Array.from({ length: damagesData.length }, (_, i) => `Month ${i + 1}`),
+          datasets: [
+            {
+              label: 'Typhoon Damages',
+              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              borderColor: 'rgba(255, 99, 132, 1)',
+              borderWidth: 1,
+              data: damagesData.map(record => record.typhoon),
+            },
+            {
+              label: 'Heavy Rain Damages',
+              backgroundColor: 'rgba(54, 162, 235, 0.5)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1,
+              data: damagesData.map(record => record.heavyRains),
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          scales: {
+            xAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Records',
+              },
+            }],
+            yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Damages',
+              },
+              ticks: {
+                beginAtZero: true,
+              },
+            }],
+          },
+        },
+      });
+    },
+  },
+};
+</script>
