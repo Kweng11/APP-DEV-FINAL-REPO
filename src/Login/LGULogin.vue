@@ -14,45 +14,40 @@
         <br>
         
         <h1> Log In</h1>
-        <form>
-            <br>
-            <br>
+        <form class="row g-3 needs-validation" novalidate method="post" action="/loginauth">
 
-            <div class="row mb-4">
-  <div class="btn-group">
-  <button type="button" class="btn btn-success" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Staff
-  </button>
-  
-  </div>
-  </div>
-          <!-- Email input -->
-          <div class="form-outline mb-4">
-            <input type="email" id="form1Example13" class="form-control form-control-lg" />
-            <label class="form-label" for="form1Example13">Email address</label>
-          </div>
+<div class="col-12">
+    <label for="yourEmail" class="form-label">Email</label>
+    <div class="input-group has-validation">
+        <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
+        <input type="text" name="email" class="form-control"
+            id="yourEmail" required>
+        <div class="invalid-feedback">Please enter your Email.</div>
+    </div>
+</div>
 
-          <!-- Password input -->
-          <div class="form-outline mb-4">
-            <input type="password" id="form1Example23" class="form-control form-control-lg" />
-            <label class="form-label" for="form1Example23">Password</label>
-          </div>
+<div class="col-12">
+    <label for="yourPassword" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control"
+        id="yourPassword" required>
+    <div class="invalid-feedback">Please enter your password!</div>
+</div>
 
-          <div class="d-flex justify-content-around align-items-center mb-4">
-            <!-- Checkbox -->
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-              <label class="form-check-label" for="form1Example3"> Remember me </label>
-            </div>
-            <a href="#!">Forgot password?</a>
-          </div>
-
-          <!-- Submit button -->
-                 <a type="button" href="/StaffHome"  class="btn btn-primary btn-block mb-4" >Sign in</a>
-
-   
-
-        </form>
+<div class="col-12">
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" name="remember"
+            value="true" id="rememberMe">
+        <label class="form-check-label" for="rememberMe">Remember me</label>
+    </div>
+</div>
+<div class="col-12">
+    <button class="btn btn-primary w-100" type="submit">Login</button>
+</div>
+<div class="col-12">
+    <p class="small mb-0">Don't have account? <a
+            class="register-link" href="/LGURegister">Create an account</a></p>
+</div>
+</form>
       </div>
     </div>
   </div>

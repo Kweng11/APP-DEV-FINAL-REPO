@@ -7,13 +7,13 @@ use CodeIgniter\Model;
 class UserModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'loginuser';
+    protected $table            = 'logintable';
     protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['email', 'password'];
+    protected $allowedFields    = ['email', 'password','role'];
 
     // Dates
     protected $useTimestamps = false;
