@@ -3,7 +3,6 @@ import Agrisync from '../views/about/Agrisync.vue'
 import about from '../views/about/About.vue'
 import Contact from '../views/about/Contact.vue'
 import Login from '../views/Login/Login.vue'
-import LGURegister from '../views/Login/LGURegister.vue'
 import Dashboard from '../views/Admin/Dashboard.vue'
 import Report from '../views/Admin/Report.vue'
 import Table from '../views/Admin/Table.vue'
@@ -70,11 +69,6 @@ const routes = [
     path: '/LGULogin',
     name: 'LGULogin',
     component:LGULogin
-    },
-    {
-      path: '/LGURegister',
-    name: 'LGURegister',
-    component:LGURegister
     },
     {
       path: '/StaffHome',
